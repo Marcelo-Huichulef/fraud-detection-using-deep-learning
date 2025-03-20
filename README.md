@@ -64,13 +64,14 @@ Dentro del notebook, sigue las instrucciones para cargar los datos, preprocesarl
 
 Este proyecto requiere las siguientes librerías:
 
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- tensorflow
-- imbalanced-learn (para NearMiss)
+- Pandas
+- NumPy
+- SciPy (incluyendo funciones estadísticas y zscore)
+- Matplotlib
+- Seaborn
+- Scikit-learn (para preprocesamiento, validación, modelado y evaluación, incluyendo StandardScaler, train_test_split, RandomForestClassifier, LogisticRegression, entre otros)
+- Imbalanced-learn (por ejemplo, SMOTE y NearMiss para balancear la distribución de clases)
+- TensorFlow y Keras (para la construcción y entrenamiento de redes neuronales)
 
 Puedes instalar todas las dependencias con:
 - pip install -r requirements.txt
