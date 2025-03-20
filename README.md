@@ -27,17 +27,26 @@ Además, se compararán los resultados de la red neuronal con otros clasificador
 ### Descripción del Proyecto
 
 #### Pasos para Resolver el Problema
-1. Preprocesamiento de los Datos:
-    - Análisis exploratorio de los datos y visualización de su distribución.
-    - Uso del algoritmo NearMiss para crear un subconjunto balanceado de datos con una proporción 50/50 entre fraudes y no fraudes.
-2. Entrenamiento del Modelo:
-    - Se entrena una red neuronal profunda para detectar fraudes en las transacciones.
-    - Se comparan los resultados con otros clasificadores como el árbol de decisiones y el modelo de regresión logística.
-3. Evaluación del Modelo:
-    - El rendimiento del modelo se mide utilizando el AUPRC (Área bajo la curva Precision-Recall), debido al desbalance de clases.
-4. Resultados:
-    - Comparación de la precisión de la red neuronal con otros clasificadores.
-    - Visualización de las métricas de evaluación y las curvas ROC y Precision-Recall.
+1.  Exploración y Preparación de Datos:
+    - Carga y análisis exploratorio: Importación del dataset y análisis inicial de sus características, distribución y valores faltantes
+    - Tratamiento de valores atípicos: Identificación y manejo de outliers mediante técnicas estadísticas como z-score
+    - Preprocesamiento: Normalización/estandarización de variables numéricas para mejorar el rendimiento de los algoritmos
+2. Manejo del Desbalance de Clases:
+    - Implementación de técnicas de submuestreo (NearMiss) y sobremuestreo (SMOTE) para equilibrar la distribución entre transacciones fraudulentas y legítimas
+    - Evaluación del impacto de estas técnicas en el rendimiento de los modelos
+3. Selección de Características:
+    - Análisis de importancia de variables mediante información mutua y otros métodos
+    - Eliminación de características redundantes o poco relevantes para mejorar la eficiencia
+4. Modelado y Evaluación:
+    - Modelos tradicionales: Implementación de Random Forest y Regresión Logística
+    - Redes neuronales: Desarrollo de arquitecturas con capas densas y dropout para prevenir sobreajuste
+    - Validación cruzada: Uso de StratifiedKFold para evaluar la robustez de los modelos
+    - Métricas de evaluación: Análisis mediante matrices de confusión, classification report y curvas ROC para evaluar el rendimiento con énfasis en la detección de fraudes
+5. Optimización y Ajuste
+    - Refinamiento de hiperparámetros para maximizar métricas relevantes (precisión, recall, F1-score)
+    - Comparación sistemática entre diferentes enfoques para seleccionar el modelo final
+6. Conclusión
+    - Posibles mejoras finales
 
 ### Cómo usarlo
 
